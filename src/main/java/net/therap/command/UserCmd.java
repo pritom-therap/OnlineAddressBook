@@ -8,7 +8,6 @@ package net.therap.command;
  * To change this template use File | Settings | File Templates.
  */
 public class UserCmd {
-
     private String userName;
     private String email;
     private String password;
