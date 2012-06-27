@@ -133,7 +133,7 @@
             <table>
                 <tr>
                     <td width="50%">
-                        <input type="submit" align="right" value="<fmt:message key="registration.title"/>"
+                        <input type="submit" align="right" value="<fmt:message key="vCardAddition.button"/>"
                                class="nicebutton">
                     </td>
                 </tr>

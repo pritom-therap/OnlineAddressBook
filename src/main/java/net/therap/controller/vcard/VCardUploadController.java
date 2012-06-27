@@ -38,6 +38,10 @@ public class VCardUploadController extends SimpleFormController{
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
         VCardUploadCmd vCardUploadCmd = (VCardUploadCmd) command;
 
+        if(vCardUploadCmd == null){
+            return new ModelAndView(new RedirectView("/gamerschoice/UploadVCard.htm"));
+        }
+
         HttpSession session = (HttpSession) request.getSession();
         User user = (User)session.getAttribute("User");
 
