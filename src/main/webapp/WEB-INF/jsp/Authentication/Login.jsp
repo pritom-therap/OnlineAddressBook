@@ -19,7 +19,7 @@
 <body>
 <div class="post">
     <div class="title">
-        <fmt:message key="login.title"/><%--${game.gameName} khelechen ?--%>
+        <fmt:message key="login.title"/><%--${authentication.gameName} khelechen ?--%>
         <br>
         <br>
     </div>

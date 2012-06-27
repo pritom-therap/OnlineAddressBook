@@ -83,6 +83,7 @@
                                 <li><a href="/gamerschoice/VCards.htm">View VCards</a></li>
                                 <li><a href="/gamerschoice/Search.htm">Search VCards</a> </li>
                                 <li><a href="/gamerschoice/UploadVCard.htm">Upload VCards</a> </li>
+                                <li><a href="/gamerschoice/Users.htm">View Users</a> </li>
 <%--                                <li><a href="/gamerschoice/TrackedItems.htm">Tracked Items</a></li>
                                 <li><a href="/gamerschoice/GamersChoice.htm">Gamer's Choice</a></li>
                                 <li><a href="/gamerschoice/Users.htm">Members</a></li>
@@ -99,8 +100,8 @@
                                 <li><a href="/gamerschoice/Register.htm">Register</a></li>
                             </c:if>
 
-                            <%-- <c:forEach items="${topGames}" var="game">
-                                <label>${game.gameName} ${game.ratingOverall}</label>
+                            <%-- <c:forEach items="${topGames}" var="authentication">
+                                <label>${authentication.gameName} ${authentication.ratingOverall}</label>
                                 <br>
                             </c:forEach>--%>
 

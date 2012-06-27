@@ -18,7 +18,7 @@
 <div class="post">
 
     <form:form commandName="requestedUser" method="post">
-        <div class="title">${requestedUser.userName}<%--${game.gameName} khelechen ?--%>
+        <div class="title">${requestedUser.userName}<%--${authentication.gameName} khelechen ?--%>
         </div>
 
         <div>
@@ -40,7 +40,7 @@
                     <jmesa:htmlColumn property="platform"/>
                     <jmesa:htmlColumn property="genreString" title="Genre(s)"/>
                     <jmesa:htmlColumn title="Rating">
-                        <%--${(game.ratingPresentation+game.ratingGraphics+game.ratingGamePlay+game.ratingSound+game.ratingLongevity)/5}--%>
+                        <%--${(authentication.ratingPresentation+authentication.ratingGraphics+authentication.ratingGamePlay+authentication.ratingSound+authentication.ratingLongevity)/5}--%>
                         ${playedGame.ratingOverall}
                     </jmesa:htmlColumn>
                 </jmesa:htmlRow>

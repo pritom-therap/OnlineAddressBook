@@ -14,7 +14,7 @@
 <head><title>Simple jsp page</title></head>
 <body>
 <div class="post">
-    <div class="title"><fmt:message key="registration.title"/><%--${game.gameName} khelechen ?--%>
+    <div class="title"><fmt:message key="registration.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
     <div class="entry">
         <form:form method="post" commandName="userCmd" action="">

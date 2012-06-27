@@ -15,7 +15,7 @@
 <head><title>Registered Users</title></head>
 <body>
 <div class="post">
-    <div class="title"><fmt:message key="users.title"/><%--${game.gameName} khelechen ?--%>
+    <div class="title"><fmt:message key="users.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
 
     <div>
@@ -36,7 +36,7 @@
 
                     <jmesa:htmlColumn property="email"/>
 
-                    <jmesa:htmlColumn property="playedGameCount" title="Games played"/>
+                    <jmesa:htmlColumn property="vCardCount" title="No. of VCards"/>
 
                 </jmesa:htmlRow>
             </jmesa:htmlTable>

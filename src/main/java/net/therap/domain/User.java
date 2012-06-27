@@ -19,6 +19,7 @@ public class User {
     private String password;
     private String email;
     private long version;
+    private int vCardCount;
     private List<VCard> vCards;
 
     @OneToMany(mappedBy = "user")
@@ -79,6 +80,12 @@ public class User {
         this.version = version;
     }
 
+    @Transient
+    public int getvCardCount() {
+        return vCards.size();
+    }
 
-
+    public void setvCardCount(int vCardCount) {
+        this.vCardCount = vCardCount;
+    }
 }

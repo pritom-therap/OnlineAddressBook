@@ -15,7 +15,7 @@
 <body>
 
 <div class="post">
-    <div class="title"><fmt:message key="vCardSearch.title"/><%--${game.gameName} khelechen ?--%>
+    <div class="title"><fmt:message key="vCardSearch.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
     <div class="entry">
         <form:form method="post" commandName="searchCmd" action="">

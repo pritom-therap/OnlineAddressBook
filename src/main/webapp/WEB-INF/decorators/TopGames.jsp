@@ -32,7 +32,7 @@
                 </jmesa:htmlColumn>
 
                 <jmesa:htmlColumn title="Rating" style="font-size:10px">
-                    <%--${(game.ratingPresentation+game.ratingGraphics+game.ratingGamePlay+game.ratingSound+game.ratingLongevity)/5}--%>
+                    <%--${(authentication.ratingPresentation+authentication.ratingGraphics+authentication.ratingGamePlay+authentication.ratingSound+authentication.ratingLongevity)/5}--%>
                     ${game.ratingOverall}
                 </jmesa:htmlColumn>
             </jmesa:htmlRow>

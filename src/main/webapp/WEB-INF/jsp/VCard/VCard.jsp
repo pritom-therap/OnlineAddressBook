@@ -15,7 +15,7 @@
 <body>
 
 <div class="post">
-    <div class="title"><fmt:message key="vCardAddition.title"/><%--${game.gameName} khelechen ?--%>
+    <div class="title"><fmt:message key="vCardAddition.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
 
 

@@ -11,7 +11,7 @@
 <body>
 
 <div class="post">
-    <div class="title"><fmt:message key="vCardUpload.title"/><%--${game.gameName} khelechen ?--%>
+    <div class="title"><fmt:message key="vCardUpload.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
     <div class="entry">
         <form:form method="post" commandName="vCardUploadCmd" enctype="multipart/form-data">
