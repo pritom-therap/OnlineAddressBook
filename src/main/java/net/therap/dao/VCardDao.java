@@ -22,5 +22,4 @@ public interface VCardDao {
     public void updateVCard(VCard vCard);
 
     public void deleteVCard(VCard vCard);
-
 }

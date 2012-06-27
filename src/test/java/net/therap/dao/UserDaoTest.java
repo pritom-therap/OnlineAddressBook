@@ -1,18 +1,10 @@
 package net.therap.dao;
 
 
-import net.therap.domain.User;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.unitils.core.Unitils;
 import org.unitils.dbunit.annotation.DataSet;
-import org.unitils.orm.hibernate.HibernateUnitils;
-import org.unitils.reflectionassert.ReflectionAssert;
 import org.unitils.spring.annotation.SpringApplicationContext;
 import org.unitils.spring.annotation.SpringBean;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,7 +20,7 @@ public class UserDaoTest extends Unitils {
 
     @SpringBean("userDao")
     UserDaoImpl userDao;
-
+/*
     @Test
     public void testMappingToDatabase() {
         HibernateUnitils.assertMappingWithDatabaseConsistent();
@@ -42,7 +34,7 @@ public class UserDaoTest extends Unitils {
 
         Assert.assertEquals(users.size(), 2);
         ReflectionAssert.assertPropertyLenientEquals("userName", Arrays.asList("ayon", "tahmid"), users);
-    }
+    }*/
 
 
 }

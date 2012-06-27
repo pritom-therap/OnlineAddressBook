@@ -21,7 +21,6 @@
 
             <table class="playedGameTable">
                 <tr>
-
                     <th>
                         Full Name
                     </th>
@@ -69,13 +68,10 @@
                     <br>
                 </c:forEach>
             </table>
-
         </fieldset>
         <br>
         <%--</c:forEach>--%>
-
     </fieldset>
-
 </div>
 </body>
 </html>

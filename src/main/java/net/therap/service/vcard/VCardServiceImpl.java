@@ -26,7 +26,6 @@ public class VCardServiceImpl implements VCardService {
     private UserDao userDao;
     private VCardExport vCardExport;
 
-
     public void setvCardExport(VCardExport vCardExport) {
         this.vCardExport = vCardExport;
     }
@@ -57,7 +56,6 @@ public class VCardServiceImpl implements VCardService {
         vCard.setUser(user);
         vCardDao.saveVCard(vCard);
     }
-
 
     public List<VCard> getVCardList(int userId) {
 
@@ -99,10 +97,10 @@ public class VCardServiceImpl implements VCardService {
         User user = userDao.getUserbyId(userId);
 
         VCard vCard = vCardExport.importVCard(importedVCard);
+
+        logger.info("Fullname" + vCard.getFullName());
         vCard.setUser(user);
 
         vCardDao.saveVCard(vCard);
     }
-
-
 }

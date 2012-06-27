@@ -22,13 +22,11 @@ import org.unitils.mock.Mock;
  */
 public class LoginControllerTest extends UnitilsTestNG{
 
-
     @TestedObject
     private LoginController loginController;
 
     @InjectIntoByType
     private Mock<UserService> mockUserService;
-
 
     @Test
     public void testAuthenticate() throws Exception {

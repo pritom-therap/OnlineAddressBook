@@ -13,31 +13,9 @@ import java.util.List;
  */
 public interface UserDao {
 
-
-    final int fpsGenreMask = 65536;
-    final int tpsGenreMask = 32768;
-    final int actionGenreMask = 16384;
-    final int adventureGenreMask = 8192;
-    final int sandboxGenreMask = 4096;
-    final int rpgGenreMask = 2048;
-    final int rtsGenreMask = 1024;
-    final int horrorGenreMask = 512;
-    final int hacknslashGenreMask = 256;
-    final int stealthGenreMask = 128;
-    final int simulationGenreMask = 64;
-    final int sportsGenreMask = 32;
-    final int racingGenreMask = 16;
-    final int fightingGenreMask = 8;
-    final int mmoGenreMask = 4;
-    final int puzzleGenreMask = 2;
-    final int platformerGenreMask = 1;
-
     public User getUserbyId(int id);
 
     public List<User> getUsers();
 
-
     public void saveUser(User user);
-
-
 }

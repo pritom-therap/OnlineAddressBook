@@ -17,11 +17,8 @@
 <div class="post">
     <div class="title"><fmt:message key="vCardAddition.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
-
-
     <div class="entry">
         <form:form commandName="vCard" method="post">
-
             <table>
                 <tr class="spaceunder2">
                     <td>
@@ -40,7 +37,6 @@
                             ${vCard.fullName}
                     </td>
                 </tr>
-
                 <tr class="spaceunder2">
                     <td>
                         <label style="font-weight:bold;"><fmt:message key="vCardAddition.Org"/>: </label>
@@ -48,7 +44,6 @@
                     <td>
                             ${vCard.org}
                     </td>
-
                 </tr>
                 <tr class="spaceunder2">
                     <td>
@@ -60,7 +55,6 @@
                     </td>
 
                 </tr>
-
                 <tr class="spaceunder2">
                     <td>
                         <label style="font-weight:bold;"><fmt:message
@@ -71,7 +65,6 @@
                     </td>
 
                 </tr>
-
                 <tr class="spaceunder2">
                     <td>
                         <label style="font-weight:bold;"><fmt:message
@@ -82,7 +75,6 @@
                     </td>
 
                 </tr>
-
                 <tr class="spaceunder2">
                     <td>
                         <label style="font-weight:bold;"><fmt:message
@@ -91,7 +83,6 @@
                     <td>
                             ${vCard.addressWork}
                     </td>
-
                 </tr>
                 <tr class="spaceunder2">
                     <td>
@@ -100,13 +91,9 @@
                     <td>
                             ${vCard.email}
                     </td>
-
                 </tr>
-
             </table>
-
             <table>
-
                 <tr>
                     <td width="50%">
                         <input type="submit" value="<fmt:message key="vCard.updateButton"/>"
@@ -117,14 +104,12 @@
                         <input type="submit" value="<fmt:message key="vCard.deleteButton"/>"
                                class="nicebutton" name="delete">
                     </td>
-                       <td>
+                    <td>
                         <input type="submit" value="<fmt:message key="vCard.exportButton"/>"
                                class="nicebutton" name="export">
                     </td>
                 </tr>
             </table>
-
-
         </form:form>
     </div>
 </div>

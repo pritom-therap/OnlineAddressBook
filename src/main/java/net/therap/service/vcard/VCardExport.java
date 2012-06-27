@@ -41,7 +41,5 @@ public interface VCardExport {
 
     public String exportVCard(VCard vCard);
 
-
     public VCard importVCard(String importedVCard);
-
 }

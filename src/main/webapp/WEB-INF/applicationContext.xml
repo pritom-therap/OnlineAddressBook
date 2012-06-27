@@ -8,13 +8,6 @@
         <property name="jndiName" value="java:comp/env/jdbc/myoracle"/>
         <property name="resourceRef" value="true"/>
     </bean>
-    <!-- <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
-            <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-            <property name="url" value="jdbc:oracle:thin:@db102:1521:THERAP"/>
-            <property name="username" value="trainee"/>
-            <property name="password" value="pass321"/>
-        </bean>
-    -->
     <bean class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" id="sessionFactory">
         <property name="dataSource" ref="dataSource"/>
         <property name="packagesToScan" value="net.therap.domain"/>
@@ -22,18 +15,14 @@
             <props>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+                <prop key="Mode">AUTO</prop>
             </props>
         </property>
     </bean>
-
-
     <bean id="userDao" class="net.therap.dao.UserDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-
     <bean id="vCardDao" class="net.therap.dao.VCardDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-
-
 </beans>

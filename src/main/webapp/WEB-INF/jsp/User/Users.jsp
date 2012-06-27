@@ -17,31 +17,20 @@
 <div class="post">
     <div class="title"><fmt:message key="users.title"/><%--${authentication.gameName} khelechen ?--%>
     </div>
-
     <div>
         <form name="UserListForm">
-
-
-        <jmesa:tableModel id="tag" items="${users}" var="user">
-
-            <c:url value="/User.htm" var="displayURL">
-                <c:param name="userId" value="${user.userId}"/>
-            </c:url>
-
-            <jmesa:htmlTable width="800px" styleClass="jmesa" cellpadding="15px" cellspacing="5px">
-                <jmesa:htmlRow>
-                    <jmesa:htmlColumn property="userName">
-                        <a href="${displayURL}">${user.userName}</a>
-                    </jmesa:htmlColumn>
-
-                    <jmesa:htmlColumn property="email"/>
-
-                    <jmesa:htmlColumn property="vCardCount" title="No. of VCards"/>
-
-                </jmesa:htmlRow>
-            </jmesa:htmlTable>
-        </jmesa:tableModel>
-    </form>
+            <jmesa:tableModel id="tag" items="${users}" var="user">
+                <jmesa:htmlTable width="800px" styleClass="jmesa" cellpadding="15px" cellspacing="5px">
+                    <jmesa:htmlRow>
+                        <jmesa:htmlColumn property="userName">
+                            ${user.userName}</a>
+                        </jmesa:htmlColumn>
+                        <jmesa:htmlColumn property="email"/>
+                        <jmesa:htmlColumn property="vCardCount" title="No. of VCards"/>
+                    </jmesa:htmlRow>
+                </jmesa:htmlTable>
+            </jmesa:tableModel>
+        </form>
     </div>
 </div>
 </body>

@@ -17,22 +17,15 @@ import javax.servlet.http.HttpServlet;
  * Time: 1:25 PM
  * To change this template use File | Settings | File Templates.
  */
-public class UserRegistrationController extends SimpleFormController{
-
-
-    private UserService userService;
-
+public class UserRegistrationController extends SimpleFormController {
     protected final Logger logger = Logger.getLogger(this.getClass());
 
-
-
+    private UserService userService;
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
 
-
-
-    protected Object formBackingObject(HttpServlet request){
+    protected Object formBackingObject(HttpServlet request) {
         UserCmd userCmd = new UserCmd();
         return userCmd;
     }

@@ -47,7 +47,4 @@ public class VCardServiceTest  extends UnitilsTestNG {
 
         Assert.assertEquals(1,vCard.getvCardId());
     }
-
-
-
 }

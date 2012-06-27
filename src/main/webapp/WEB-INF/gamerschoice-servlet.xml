@@ -10,7 +10,6 @@
                            http://www.springframework.org/schema/aop
                            http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
@@ -99,30 +98,22 @@
         <property name="formView" value="VCard/UploadVCard"/>
     </bean>
 
-
     <bean name="logoutController" class="net.therap.controller.authentication.LogoutController"/>
-
 
     <bean name="viewUsersController" class="net.therap.controller.user.ViewUsersController">
         <property name="userService" ref="userService"/>
-
     </bean>
 
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
-
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" id="simpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-
                 <prop key="/Register.htm">userRegistrationController</prop>
                 <prop key="/Login.htm">loginController</prop>
-
                 <prop key="/Logout.htm">logoutController</prop>
-
                 <prop key="/Users.htm">viewUsersController</prop>
-
                 <prop key="/VCardAddition.htm">vCardAdditionController</prop>
                 <prop key="/VCards.htm">vCardsController</prop>
                 <prop key="/Search.htm">vCardSearchController</prop>
@@ -132,7 +123,6 @@
             </props>
         </property>
     </bean>
-
 
     <bean id="userService" class="net.therap.service.user.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
@@ -149,7 +139,6 @@
     <bean id="userRegistrationValidator" class="net.therap.validators.UserRegistrationValidator"/>
 
     <bean id="loginValidator" class="net.therap.validators.LoginValidator"/>
-
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="messages_en_US"/>

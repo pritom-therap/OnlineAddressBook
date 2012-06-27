@@ -33,12 +33,10 @@ public class VCardUpdateController extends SimpleFormController {
         return vCard;
     }
 
-
     @Override
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
         VCard vCard =(VCard) command;
         vCardService.updateVCard(vCard);
-
 
         return new ModelAndView(new RedirectView("/gamerschoice/VCards.htm"));
     }

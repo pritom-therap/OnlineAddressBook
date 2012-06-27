@@ -22,5 +22,4 @@ public interface UserService {
     public User authenticate(LoginCmd loginCmd);
 
     public List<User> getUsers();
-
 }

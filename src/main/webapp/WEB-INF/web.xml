@@ -11,9 +11,6 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
-
-
-
     <filter>
         <filter-name>OpenSessionInViewFilter</filter-name>
         <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
@@ -41,8 +38,6 @@
     </filter-mapping>
 
 
-
-
     <filter>
         <filter-name>loginFilter</filter-name>
         <filter-class>net.therap.filter.LoginFilter</filter-class>
@@ -56,11 +51,6 @@
     </filter-mapping>
 
 
-
-
-
-
-
     <servlet>
         <servlet-name>gamerschoice</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -70,7 +60,6 @@
         <servlet-name>gamerschoice</servlet-name>
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
-
 
 
     <jsp-config>

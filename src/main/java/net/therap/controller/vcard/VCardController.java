@@ -26,22 +26,15 @@ public class VCardController extends SimpleFormController {
         this.vCardService = vCardService;
     }
 
-
     @Override
     protected Object formBackingObject(HttpServletRequest request) throws Exception {
 
         int vCardId = ServletRequestUtils.getIntParameter(request, "vCardId", -1);
-
         VCard vCard = vCardService.getVCardById(vCardId);
-
-
         return vCard;
     }
 
     @Override
-/*
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-*/
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
         VCard vCard = (VCard) command;
 
@@ -55,24 +48,19 @@ public class VCardController extends SimpleFormController {
         if (isUpdate != null) {
             return new ModelAndView(new RedirectView("/gamerschoice/UpdateVCard.htm"), modelMap);
         }
-
         if (isDelete != null) {
             vCardService.deleteVCard(vCard);
             return new ModelAndView(new RedirectView("/gamerschoice/VCards.htm"));
         }
-
         if (isExport != null) {
             String exportedVCard = vCardService.exportVCard(vCard.getvCardId());
 
             response.setContentType("text/text");
-            response.setHeader("Content-Disposition", "attachment; filename="+vCard.getName()+".vcf");
+            response.setHeader("Content-Disposition", "attachment; filename=" + vCard.getName() + ".vcf");
             response.getOutputStream().write(exportedVCard.getBytes());
             response.flushBuffer();
-
         }
-
         return new ModelAndView("VCard/VCard");
-
     }
 
 }

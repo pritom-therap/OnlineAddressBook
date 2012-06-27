@@ -67,19 +67,14 @@
                         <form:errors path="confirmPassword" cssClass="error"/>
                     </td>
                 </tr>
-
-
             </table>
-
             <table>
                 <tr>
                     <td>
                         <form:checkbox path="agreeRules"/><fmt:message key="registration.agreeRules"/>
-
-
                     </td>
                 </tr>
-                 <tr>
+                <tr>
                     <td>
                         <form:errors path="agreeRules" cssClass="error"/>
                     </td>
@@ -96,14 +91,13 @@
                         <form:errors path="agreeAgeLimit" cssClass="error"/>
                     </td>
                 </tr>
-
                 <tr>
                     <td width="50%">
-                        <input type="submit" align="right" value="<fmt:message key="registration.title"/>" class="nicebutton">
+                        <input type="submit" align="right" value="<fmt:message key="registration.title"/>"
+                               class="nicebutton">
                     </td>
                 </tr>
             </table>
-
         </form:form>
     </div>
 </div>

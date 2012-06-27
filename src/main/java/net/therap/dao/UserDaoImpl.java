@@ -22,25 +22,15 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
         return getHibernateTemplate().load(User.class, id);  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-
     public void saveUser(User user) {
-
 
         Session session = getSession();
         session.saveOrUpdate(user);
-
-        session.flush();
     }
-
 
     public List<User> getUsers() {
         String queryString = "from User";
-
         List<User> users = getHibernateTemplate().find(queryString);
         return users;
     }
-
-
-
-
 }

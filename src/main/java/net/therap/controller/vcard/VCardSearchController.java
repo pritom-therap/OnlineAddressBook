@@ -25,10 +25,6 @@ public class VCardSearchController extends SimpleFormController {
 
     VCardService vCardService;
 
-    public VCardService getvCardService() {
-        return vCardService;
-    }
-
     public void setvCardService(VCardService vCardService) {
         this.vCardService = vCardService;
     }
@@ -54,7 +50,5 @@ public class VCardSearchController extends SimpleFormController {
         modelMap.addAttribute("vCardList",vCardList);
 
         return  new ModelAndView("VCard/VCards",modelMap);
-
-
     }
 }

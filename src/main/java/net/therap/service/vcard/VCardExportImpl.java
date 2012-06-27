@@ -77,7 +77,6 @@ public class VCardExportImpl implements VCardExport {
                 + addresss(vCard.getAddressWork()) + email(vCard.getEmail()) + rev(vCard.getRev()) + endVCard();
     }
 
-
     public VCard importVCard(String importedVCard) {
 
         VCard vCard = new VCard();
@@ -106,9 +105,7 @@ public class VCardExportImpl implements VCardExport {
             }
             i++;
         }
-
         vCard.setRev(new Date());
-
         return vCard;
     }
 }

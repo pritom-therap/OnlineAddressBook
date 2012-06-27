@@ -39,7 +39,7 @@ public class UserServiceTest extends UnitilsTestNG {
         loginCmd = new LoginCmd();
         user1 = new User();
 
-        user1.setUserName("Tahmid");
+        user1.setUserName("Pritom");
         user1.setEmail("sinetob@gmail.com");
         user1.setPassword("123");
 

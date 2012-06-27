@@ -23,7 +23,6 @@ public class VCardUploadController extends SimpleFormController{
 
     VCardService vCardService;
 
-
     public void setvCardService(VCardService vCardService) {
         this.vCardService = vCardService;
     }
@@ -40,10 +39,7 @@ public class VCardUploadController extends SimpleFormController{
         VCardUploadCmd vCardUploadCmd = (VCardUploadCmd) command;
 
         HttpSession session = (HttpSession) request.getSession();
-
         User user = (User)session.getAttribute("User");
-
-
 
         vCardService.uploadVCard(vCardUploadCmd.getFile(), user.getUserId());
 

@@ -16,22 +16,20 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class UserServiceImpl implements UserService {
+    Logger logger = Logger.getLogger(this.getClass());
 
     private UserDao userDao;
-    Logger logger = Logger.getLogger(this.getClass());
 
     public void saveUser(UserCmd userCmd) {
         User user = new User();
 
-        logger.info(userCmd.getPassword());
+        logger.info("Confirm Password : " + userCmd.getPassword());
 
         user.setUserName(userCmd.getUserName());
         user.setEmail(userCmd.getEmail());
         user.setPassword(userCmd.getPassword());
 
         userDao.saveUser(user);
-
-
     }
 
     public UserDao getUserDao() {
@@ -50,8 +48,6 @@ public class UserServiceImpl implements UserService {
             if (user.getEmail().equals(loginCmd.getEmail()) && user.getPassword().equals(loginCmd.getPassword())) {
                 return user;
             }
-
-
         }
         return null;
     }

@@ -11,17 +11,17 @@
 
 <body>
 <div class="post">
-<%--    <div class="entry">
-        ${message}
-
-    </div>--%>
-
+    <div class="entry">
+        Online address book typically enables users to create their own web page (or profile page) which is then indexed
+        by search engines like Google and Yahoo. This in turn enables users to be found by other people via a search
+        of their name and then contacted via their web page containing their personal information.
+        Ability to find people registered with online address books via search engine searches usually varies
+        according to the commonness of the name and the amount of results for the name.
+    </div>
 </div>
 </body>
 
 <body>
-
-
 
 
 </body>

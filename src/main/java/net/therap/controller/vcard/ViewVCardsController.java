@@ -39,15 +39,11 @@ public class ViewVCardsController implements Controller{
         User user = (User) session.getAttribute("User");
 
         user = userService.getUserById(user.getUserId());
-
         List<VCard> vCardList = vCardService.getVCardList(user.getUserId());
 
         ModelMap modelMap = new ModelMap();
-
         modelMap.addAttribute("vCardList", vCardList);
 
         return new ModelAndView("VCard/VCards", modelMap);
-
-
     }
 }

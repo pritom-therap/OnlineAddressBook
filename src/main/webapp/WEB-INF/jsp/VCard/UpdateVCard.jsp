@@ -129,19 +129,14 @@
                         <form:errors path="email" cssClass="error"/>
                     </td>
                 </tr>
-
             </table>
-
             <table>
-
-
                 <tr>
                     <td width="50%">
                         <input type="submit" align="right" value="<fmt:message key="vCard.updateButton"/>" class="nicebutton">
                     </td>
                 </tr>
             </table>
-
         </form:form>
     </div>
 </div>

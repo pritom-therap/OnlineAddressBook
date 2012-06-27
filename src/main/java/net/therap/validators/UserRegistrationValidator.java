@@ -20,7 +20,6 @@ public class UserRegistrationValidator implements Validator {
         return UserCmd.class.equals(aClass);
     }
 
-
     public void validate(Object o, Errors errors) {
         UserCmd userCmd = (UserCmd) o;
 

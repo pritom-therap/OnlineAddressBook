@@ -32,9 +32,7 @@
                     </td>
                 </tr>
             </table>
-
             <table>
-
                 <tr>
                     <td width="50%">
                         <input type="submit" align="right" value="<fmt:message key="vCardSearch.button"/>"
@@ -42,7 +40,6 @@
                     </td>
                 </tr>
             </table>
-
         </form:form>
     </div>
  </div>

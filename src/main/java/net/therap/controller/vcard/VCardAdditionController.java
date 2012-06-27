@@ -32,7 +32,6 @@ public class VCardAdditionController extends SimpleFormController {
         return vCardCmd;
     }
 
-
     @Override
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
 

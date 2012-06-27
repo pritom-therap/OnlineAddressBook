@@ -12,7 +12,7 @@
 
 <html>
 <head>
-<title>Simple jsp page</title>
+    <title>Simple jsp page</title>
 
 
 </head>
@@ -30,7 +30,7 @@
             <table>
                 <tr class="spaceunder2">
                     <td>
-                       <fmt:message key="login.email"/> :
+                        <fmt:message key="login.email"/> :
                     </td>
                     <td>
                         <form:input path="email"/>
@@ -39,7 +39,6 @@
                         <form:errors path="email" cssClass="error"/>
                     </td>
                 </tr>
-
                 <tr class="spaceunder2">
                     <td>
                         <fmt:message key="login.password"/> :
@@ -52,10 +51,7 @@
                         <form:errors path="password" cssClass="error"/>
                     </td>
                 </tr>
-
                 <tr>
-
-
                     <td>
                         <input type="submit" align="right" value="Login" class="nicebutton">
                     </td>
