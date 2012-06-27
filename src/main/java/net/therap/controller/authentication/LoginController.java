@@ -38,7 +38,7 @@ public class LoginController extends SimpleFormController {
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
 
         LoginCmd loginCmd = (LoginCmd) command;
-        User user = userService.Authenticate(loginCmd);
+        User user = userService.authenticate(loginCmd);
 
         if (user != null) {
             HttpSession session = request.getSession();

@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
-    public User Authenticate(LoginCmd loginCmd) {
+    public User authenticate(LoginCmd loginCmd) {
 
         List<User> users = userDao.getUsers();
         for (User user : users) {

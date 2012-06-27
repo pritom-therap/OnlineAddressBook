@@ -40,12 +40,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
         return users;
     }
 
-    public void updateUser(User user) {
 
-        Session session = getSession();
-        session.update(user);
-        session.flush();
-    }
 
 
 }

@@ -54,10 +54,7 @@ public class VCardServiceImpl implements VCardService {
         vCard.setRev(new Date());
 
         User user = userDao.getUserbyId(userId);
-
-
         vCard.setUser(user);
-
         vCardDao.saveVCard(vCard);
     }
 
@@ -96,22 +93,16 @@ public class VCardServiceImpl implements VCardService {
     public void uploadVCard(MultipartFile multipartFile,int userId) throws IOException {
 
         byte[] importedVCardBytes = new byte[(int) multipartFile.getSize()];
-
         importedVCardBytes = multipartFile.getBytes();
-
         String importedVCard = new String(importedVCardBytes);
 
         User user = userDao.getUserbyId(userId);
 
-         logger.info("PPPPPPPPPPPPPPPPPp");
-
         VCard vCard = vCardExport.importVCard(importedVCard);
         vCard.setUser(user);
 
-
-
-        vCardDao.saveVCard(vCard);/*
-        int vCardId = vCard.getvCardId();
-        return 1;*/
+        vCardDao.saveVCard(vCard);
     }
+
+
 }

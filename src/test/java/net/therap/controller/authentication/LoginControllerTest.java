@@ -3,11 +3,11 @@ package net.therap.controller.authentication;
 import net.therap.command.LoginCmd;
 import net.therap.domain.User;
 import net.therap.service.user.UserService;
-import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.unitils.UnitilsTestNG;
 import org.unitils.inject.annotation.InjectIntoByType;
 import org.unitils.inject.annotation.TestedObject;
@@ -29,12 +29,6 @@ public class LoginControllerTest extends UnitilsTestNG{
     @InjectIntoByType
     private Mock<UserService> mockUserService;
 
-/*
-    protected List<User> userList;
-
-    @Dummy
-    protected User user1, user2;*/
-
 
     @Test
     public void testAuthenticate() throws Exception {
@@ -43,7 +37,7 @@ public class LoginControllerTest extends UnitilsTestNG{
         loginController.setCommandClass(loginCmd.getClass());
 
         String formView = "Login";
-        String successView = "Success";
+        String successView = "VCard/Success";
 
         loginController.setFormView(formView);
         loginController.setSuccessView(successView);
@@ -56,15 +50,11 @@ public class LoginControllerTest extends UnitilsTestNG{
 
         User user = new User();
 
-        mockUserService.returns(user).Authenticate(loginCmd);
+        mockUserService.returns(user).authenticate(loginCmd);
 
         ModelAndView modelAndView = loginController.handleRequest(mockHttpServletRequest,mockHttpServletResponse);
 
         Assert.assertEquals(successView,modelAndView.getViewName());
     }
-
-
-
 }
-
 

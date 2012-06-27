@@ -39,7 +39,5 @@ public interface UserDao {
 
     public void saveUser(User user);
 
-    public void updateUser(User user);
-
 
 }
