@@ -29,12 +29,10 @@ public class UserDaoTest extends UnitilsTestNG {
     @SpringBean("userDao")
     UserDao userDao;
 
-
     @Test
     public void testMappingToDatabase() {
         HibernateUnitils.assertMappingWithDatabaseConsistent();
     }
-
 
     @Test
     public void testGetUsers() {
@@ -44,6 +42,4 @@ public class UserDaoTest extends UnitilsTestNG {
         Assert.assertEquals(users.size(), 2);
         ReflectionAssert.assertPropertyLenientEquals("userName", Arrays.asList("ayon", "Pritom"), users);
     }
-
-
 }
