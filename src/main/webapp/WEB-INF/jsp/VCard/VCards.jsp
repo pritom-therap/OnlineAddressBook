@@ -15,62 +15,55 @@
 <div class="post">
     <fieldset>
         <legend><h2><fmt:message key="vCardsView.title"/></h2></legend>
-        <%--<c:forEach items="${vCardList}" var="vCard">--%>
-        <fieldset style="width:800px">
-            <legend><h3>${user.userName}'s VCard:</h3></legend>
-
-            <table class="playedGameTable">
+        <table class="playedGameTable">
+            <tr>
+                <th>
+                    Full Name
+                </th>
+                <th>
+                    Organization
+                </th>
+                <th>
+                    JobTitle
+                </th>
+                <th>
+                    Telephone(Work)
+                </th>
+                <th>
+                    Telephone(Home)
+                </th>
+                <th>
+                    Email
+                </th>
+            </tr>
+            <c:forEach items="${vCardList}" var="vCard">
+                <c:url value="/VCard.htm" var="vCardURL">
+                    <c:param name="vCardId" value="${vCard.vCardId}"/>
+                </c:url>
                 <tr>
-                    <th>
-                        Full Name
-                    </th>
-                    <th>
-                        Organization
-                    </th>
-                    <th>
-                        JobTitle
-                    </th>
-                    <th>
-                        Telephone(Work)
-                    </th>
-                    <th>
-                        Telephone(Home)
-                    </th>
-                    <th>
-                        Email
-                    </th>
-                </tr>
-                <c:forEach items="${vCardList}" var="vCard">
-                    <c:url value="/VCard.htm" var="vCardURL">
-                        <c:param name="vCardId" value="${vCard.vCardId}"/>
-                    </c:url>
-                    <tr>
-                        <td>
-                            <a href="${vCardURL}">${vCard.fullName}</a>
-                        </td>
+                    <td>
+                        <a href="${vCardURL}">${vCard.fullName}</a>
+                    </td>
 
-                        <td>
-                                ${vCard.org}
-                        </td>
-                        <td>
-                                ${vCard.title}
-                        </td>
-                        <td>
-                                ${vCard.telephoneWork}
-                        </td>
-                        <td>
-                                ${vCard.telephoneHome}
-                        </td>
-                        <td>
-                                ${vCard.email}
-                        </td>
-                    </tr>
-                    <br>
-                </c:forEach>
-            </table>
-        </fieldset>
-        <br>
-        <%--</c:forEach>--%>
+                    <td>
+                            ${vCard.org}
+                    </td>
+                    <td>
+                            ${vCard.title}
+                    </td>
+                    <td>
+                            ${vCard.telephoneWork}
+                    </td>
+                    <td>
+                            ${vCard.telephoneHome}
+                    </td>
+                    <td>
+                            ${vCard.email}
+                    </td>
+                </tr>
+                <br>
+            </c:forEach>
+        </table>
     </fieldset>
 </div>
 </body>

@@ -96,6 +96,7 @@
         <property name="commandClass" value="net.therap.command.VCardUploadCmd"/>
         <property name="vCardService" ref="vCardService"/>
         <property name="formView" value="VCard/UploadVCard"/>
+        <property name="validator" ref="vCardUploadValidator"/>
     </bean>
 
     <bean name="logoutController" class="net.therap.controller.authentication.LogoutController"/>
@@ -139,6 +140,8 @@
     <bean id="userRegistrationValidator" class="net.therap.validators.UserRegistrationValidator"/>
 
     <bean id="loginValidator" class="net.therap.validators.LoginValidator"/>
+
+    <bean id="vCardUploadValidator" class="net.therap.validators.UploadValidator"/>
 
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
