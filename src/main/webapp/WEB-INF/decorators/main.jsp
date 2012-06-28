@@ -87,7 +87,7 @@
     <!-- end #page -->
     <div id="footer-bgcontent">
         <div id="footer">
-            <p>Copyright (c) 2012 GamersChoice. All rights reserved. Developed by <a
+            <p>Copyright (c) 2012 Therap. All rights reserved. Developed by <a
                     href="https://www.facebook.com/pritomahmed.pritom">Pritom</a>
         </div>
     </div>
