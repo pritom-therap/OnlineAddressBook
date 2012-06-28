@@ -39,6 +39,7 @@ public class VCardDaoImpl extends HibernateDaoSupport implements VCardDao {
     public void updateVCard(VCard vCard) {
         Session session = getSession();
         session.merge(vCard);
+        session.flush();
     }
 
     public void deleteVCard(VCard vCard) {
