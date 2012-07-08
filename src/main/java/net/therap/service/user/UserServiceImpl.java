@@ -16,7 +16,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class UserServiceImpl implements UserService {
-    Logger logger = Logger.getLogger(this.getClass());
+    protected final Logger logger = Logger.getLogger(this.getClass());
 
     private UserDao userDao;
 

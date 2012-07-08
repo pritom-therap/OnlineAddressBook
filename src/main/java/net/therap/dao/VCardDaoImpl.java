@@ -17,7 +17,6 @@ import java.util.List;
 public class VCardDaoImpl extends HibernateDaoSupport implements VCardDao {
 
     public void saveVCard(VCard vCard) {
-
         Session session = getSession();
         session.saveOrUpdate(vCard);
         session.flush();

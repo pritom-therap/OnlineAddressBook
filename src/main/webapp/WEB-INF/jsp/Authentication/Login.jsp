@@ -60,9 +60,9 @@
         </form:form>
 
 
-        <c:if test="${not empty message}">
+ <%--       <c:if test="${not empty message}">
             <label style="color:red;">${message}</label>
-        </c:if>
+        </c:if>--%>
     </div>
 </div>
 </body>

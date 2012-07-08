@@ -59,6 +59,7 @@
         <property name="vCardService" ref="vCardService"/>
         <property name="formView" value="VCard/AddVCard"/>
         <property name="successView" value="VCard/Success"/>
+        <property name="validator" ref="addVCardValidator"/>
     </bean>
 
 
@@ -89,6 +90,7 @@
         <property name="commandClass" value="net.therap.domain.VCard"/>
         <property name="formView" value="VCard/UpdateVCard"/>
         <property name="successView" value="VCard/VCards"/>
+        <property name="validator" ref="updateVCardValidator"/>
     </bean>
 
     <bean name="vCardUploadController" class="net.therap.controller.vcard.VCardUploadController">
@@ -143,6 +145,8 @@
 
     <bean id="vCardUploadValidator" class="net.therap.validators.UploadValidator"/>
 
+    <bean id= "addVCardValidator" class="net.therap.validators.AddVCardValidator"/>
+    <bean id="updateVCardValidator" class="net.therap.validators.UpdateVCardValidator"/>
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="messages_en_US"/>
